@@ -90,6 +90,7 @@ details {
   border: 1px solid black;
   width: 35%;
   margin: 2px;
+  cursor: pointer;
 }
 @media (max-width: 630px) {
   details {
@@ -140,7 +141,7 @@ details[open] summary {
 
 .contact-info-header {
   font-size: calc(10px + 2 * ((100vw - 320px) / 1120));
-  color: #533e3e;
+  color: #302525;
   font-family: "Montserrat Alternates", sans-serif;
   text-decoration: none;
 }

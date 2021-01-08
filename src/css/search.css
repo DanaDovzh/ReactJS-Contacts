@@ -1,0 +1,11 @@
+.search-place {
+  display: flex;
+  justify-content: flex-end;
+}
+.search-place input {
+  height: 20px;
+}
+
+input:focus {
+  border: #b80808;
+}

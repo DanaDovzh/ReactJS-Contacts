@@ -1,0 +1,218 @@
+@charset "UTF-8";
+.active-action {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 10px;
+}
+
+.search-place {
+  display: flex;
+  justify-content: flex-end;
+}
+.search-place input {
+  height: 20px;
+  width: 100px;
+}
+.search-place input:focus {
+  box-shadow: 5px 5px 15px 5px #b80808;
+}
+
+.contact {
+  display: flex;
+  background-color: #b1b1b1;
+  justify-content: space-evenly;
+  padding: 10px;
+  align-items: center;
+}
+.contact-info {
+  margin-left: 10px;
+}
+
+.femaleSign {
+  position: relative;
+}
+.femaleSign img {
+  width: 100px;
+}
+.femaleSign::before {
+  background-image: url("../img/gender/female.svg");
+  content: "";
+  position: absolute;
+  background-image: url("../img/gender/female.svg");
+  width: 25px;
+  height: 25px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  bottom: 0;
+  left: 75px;
+}
+
+.maleSign {
+  position: relative;
+}
+.maleSign img {
+  width: 100px;
+}
+.maleSign::before {
+  content: "";
+  position: absolute;
+  background-image: url("../img/gender/female.svg");
+  width: 25px;
+  height: 25px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  bottom: 0;
+  left: 75px;
+  background-image: url("../img/gender/male.svg");
+}
+
+.otherSign {
+  position: relative;
+}
+.otherSign img {
+  width: 100px;
+}
+.otherSign::before {
+  content: "";
+  position: absolute;
+  background-image: url("../img/gender/female.svg");
+  width: 25px;
+  height: 25px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  bottom: 0;
+  left: 75px;
+  background-image: url("../img/gender/other.svg");
+}
+
+details {
+  border: 1px solid black;
+  width: 35%;
+  margin: 2px;
+}
+@media (max-width: 630px) {
+  details {
+    width: 50%;
+  }
+}
+@media (max-width: 425px) {
+  details {
+    width: 80%;
+  }
+}
+
+details summary::-webkit-details-marker {
+  display: none;
+}
+
+details > summary {
+  list-style: none;
+}
+
+details summary:before {
+  content: "📞";
+  margin-right: 7px;
+}
+
+details[open] summary:before {
+  content: "📖";
+}
+
+summary {
+  background-image: linear-gradient(90deg, #ff9d81 24.3%, #ff4e4e 78.3%);
+  padding: 10px;
+}
+summary:focus {
+  outline: none;
+  border: none;
+}
+
+details[open] summary {
+  background-image: linear-gradient(-90deg, #ff9d81 24.3%, #ff4e4e 78.3%);
+}
+
+.contact-title {
+  font-family: "Cormorant Infant", serif;
+  font-size: calc(14px + 8 * ((100vw - 320px) / 1120));
+  font-weight: 900;
+}
+
+.contact-info-header {
+  font-size: calc(10px + 2 * ((100vw - 320px) / 1120));
+  color: #533e3e;
+  font-family: "Montserrat Alternates", sans-serif;
+  text-decoration: none;
+}
+.contact-info-header span {
+  font-size: calc(12px + 4 * ((100vw - 320px) / 1120));
+  color: #181212;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+p {
+  padding: 0;
+  margin: 0;
+}
+
+div#root {
+  height: 100%;
+}
+
+.wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.contacts-list {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+
+.head-page {
+  display: flex;
+  background-image: radial-gradient(circle farthest-corner at 10% 20%, #e22525 0%, #d33131 82.8%);
+  padding: 0px 10px;
+  justify-content: flex-start;
+  align-items: center;
+  color: #ffffff;
+  font-size: 32px;
+  font-family: "Kaushan Script", cursive;
+}
+
+.icon {
+  height: 60px;
+}
+
+.main {
+  flex: 1 0 auto;
+  background: linear-gradient(90deg, rgba(20, 20, 20, 0.3) 0%, rgba(238, 233, 233, 0.43) 0%), url("../img/bg.jpg") center center fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.MuiTypography-body1 {
+  font-size: calc(12px + 4 * ((100vw - 320px) / 1120));
+}
+
+@media (max-width: 630px) {
+  .PrivateSwitchBase-root-1 {
+    padding: 0px;
+  }
+}
+
+.footer {
+  flex-shrink: 0;
+  height: 20px;
+  background-image: linear-gradient(181.3deg, #860f0f 24.9%, #b70a0a 46.9%, #d24600 85.1%);
+}

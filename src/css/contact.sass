@@ -1,0 +1,100 @@
+$context: 16
+$maxWidth: 1440
+
+@mixin adaptiv-font($pcSize, $mobSize)
+    $addSize: $pcSize - $mobSize
+    $maxWidth: $maxWidth - 320
+    font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}))
+.contact 
+    display: flex
+    background-color: #b1b1b1
+    justify-content: space-evenly
+    padding: 10px
+    align-items: center
+    &-info
+        margin-left: 10px
+@mixin iconBefore()
+    content: ''
+    position: absolute
+    background-image: url("../img/gender/female.svg")
+    width: 25px
+    height: 25px
+    background-repeat: no-repeat
+    background-size: contain
+    bottom: 0
+    left: 75px
+    
+.femaleSign
+    img
+        width: 100px
+            
+    position: relative
+    &::before
+        background-image: url("../img/gender/female.svg")
+        @include iconBefore()
+        
+.maleSign
+    img
+        width: 100px
+    position: relative
+    &::before
+        @include iconBefore()
+        background-image: url("../img/gender/male.svg")
+        
+.otherSign
+    img
+        width: 100px
+    position: relative
+    &::before
+        @include iconBefore()
+        background-image: url("../img/gender/other.svg")
+
+details
+    border: 1px solid black
+    width: 35%
+    margin: 2px
+    @media ( max-width:  630px)
+        width: 50%
+    @media ( max-width:  425px)
+        width: 80%
+        
+
+details summary::-webkit-details-marker 
+  display: none
+
+details > summary 
+  list-style: none
+
+
+details summary:before 
+  content: '\01F4DE'
+  margin-right: 7px
+
+details[open] summary:before 
+  content: '\01F4D6'
+
+summary
+    background-image: linear-gradient( 90deg,rgba(255,157,129,1) 24.3%, rgba(255,78,78,1) 78.3% )
+    padding: 10px
+    &:focus
+        outline: none
+        border: none
+        
+
+details[open]
+    summary
+        background-image: linear-gradient(-90deg,rgba(255,157,129,1) 24.3%, rgba(255,78,78,1) 78.3% )
+.contact-title  
+    font-family: 'Cormorant Infant', serif
+    @include adaptiv-font(22, 14)
+    
+    font-weight: 900
+
+.contact-info-header
+    @include adaptiv-font(12, 10)
+    color: #533e3e
+    font-family: 'Montserrat Alternates', sans-serif
+    text-decoration: none
+    span
+        @include adaptiv-font(16, 12)
+        color: #181212

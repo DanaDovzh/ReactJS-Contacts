@@ -1,9 +1,9 @@
-import React from 'react';
-import FormGroup from "@material-ui/core/FormGroup/FormGroup";
-import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Checkbox from "@material-ui/core/Checkbox";
+import FormControlLabel from "@material-ui/core/FormControlLabel";
+import FormGroup from "@material-ui/core/FormGroup/FormGroup";
 import Favorite from '@material-ui/icons/Favorite';
 import FavoriteBorder from '@material-ui/icons/FavoriteBorder';
+import React from 'react';
 
 function ChooseGender(props) {
     return (

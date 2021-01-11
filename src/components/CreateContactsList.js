@@ -99,6 +99,7 @@ class CreatePostPage extends Component {
         const neededKeys = ["firstName", "lastName", "phone"];
         if (!enterValue) {
             this.filterGenders(event);
+            this.setState({search: true})
         } else {
             this.state.contacts.forEach((el, index) => {
                 neededKeys.map(item => {
@@ -116,11 +117,8 @@ class CreatePostPage extends Component {
     };
 
     createList() {
-        console.log(this.state.search)
-        if(this.state.search)
-           return this.state.contacts.map(contact => <Contact {...contact} />)
-        else 
-            return (<div className = "no-contacts">Контактів немає</div>)  
+        return (this.state.search) ? this.state.contacts.map(contact => <Contact {...contact} />)
+            :(<div className = "no-contacts">Контактів немає</div>)  
     };
     render() {
         return (

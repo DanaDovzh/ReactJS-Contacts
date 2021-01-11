@@ -9,20 +9,20 @@ function setGender (gender) {
     }
 }
 
-function Contact(props) {
+function Contact({firstName, lastName, gender, photo, phone}) {
     return (
         <details>
-            <summary className = "contact-title">{props.info.lastName} {props.info.firstName}</summary>
+            <summary className = "contact-title">{lastName} {firstName}</summary>
             <div className = "contact">
                 <div >
-                    <p className = {setGender(props.info.gender)}>
-                        <img src = {props.info.photo} />
+                    <p className = {setGender(gender)}>
+                        <img src = {photo} />
                     </p>
                 </div>
                 <div className = "contact-info">
-                    <p className = "contact-info-header">ім'я: <span>{props.info.firstName}</span></p>
-                    <p className = "contact-info-header">прізвище: <span>{props.info.lastName}</span></p>  
-                    <a  className = "contact-info-header" href={props.info.phone}>моб.тел.: <span>{props.info.phone}</span></a>
+                    <p className = "contact-info-header">ім'я: <span>{firstName}</span></p>
+                    <p className = "contact-info-header">прізвище: <span>{lastName}</span></p>  
+                    <a  className = "contact-info-header" href={phone}>моб.тел.: <span>{phone}</span></a>
                 </div>
             </div>
         </details>

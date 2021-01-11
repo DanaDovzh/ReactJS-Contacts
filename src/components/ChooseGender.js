@@ -5,15 +5,15 @@ import Favorite from '@material-ui/icons/Favorite';
 import FavoriteBorder from '@material-ui/icons/FavoriteBorder';
 import React from 'react';
 
-function ChooseGender(props) {
+function ChooseGender({ checkMale, funcG, checkFemale, checkOther }) {
     return (
         <div className="checkbox-section">
             <FormGroup row>
                 <FormControlLabel
                     control={
                         <Checkbox
-                            checked={props.checkMale}
-                            onChange={(e) => props.funcG(e)}
+                            checked={checkMale}
+                            onChange={(e) => funcG(e)}
                             name="checkMale"
                             color="primary"
                             icon={<FavoriteBorder />} 
@@ -26,8 +26,8 @@ function ChooseGender(props) {
                 <FormControlLabel
                     control={
                         <Checkbox
-                            checked={props.checkFemale}
-                            onChange={(event) => props.funcG(event)}
+                            checked={checkFemale}
+                            onChange={(event) => funcG(event)}
                             name="checkFemale"
                             icon={<FavoriteBorder />} 
                             checkedIcon={<Favorite />}
@@ -39,8 +39,8 @@ function ChooseGender(props) {
                 <FormControlLabel
                     control={
                         <Checkbox
-                            checked={props.checkOther}
-                            onChange={(event) => props.funcG(event)}
+                            checked={checkOther}
+                            onChange={(event) => funcG(event)}
                             name="checkOther"
                             color = "default"
                             icon={<FavoriteBorder />} 

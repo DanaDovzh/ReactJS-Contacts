@@ -52,27 +52,8 @@ class CreatePostPage extends Component {
         contacts: contactsList,
         checkMale: true,
         checkFemale: true,
-        checkOther: true
-    };
-
-    filterSearch(event) {
-        const enterValue = event.target.value.toLowerCase();
-        const newArray = [];
-        const neededKeys = ["firstName", "lastName", "phone"];
-        if (enterValue === '') {
-            this.setState({ contacts: contactsList });
-        } else {
-            contactsList.forEach((el, index) => {
-                neededKeys.map(item => {
-                    if (contactsList[index][item].toLowerCase().indexOf(enterValue) !== -1) {
-                        if (!newArray.includes(el)) {
-                            newArray.push(el);
-                        };
-                    };
-                });
-            });
-            this.setState({ contacts: newArray });
-        };
+        checkOther: true,
+        search: true
     };
 
     findGender = () => {
@@ -104,6 +85,40 @@ class CreatePostPage extends Component {
         this.setState({ contacts: contactsList });
         this.setState({ [event.target.name]: event.target.checked }, this.findGender);
     };
+
+    filterSearch(event) {
+        const enterValue = event.target.value.toLowerCase();
+        const newArray = [];
+        const neededKeys = ["firstName", "lastName", "phone"];
+        if (!enterValue) {
+            this.filterGenders(event);
+        } else {
+            this.state.contacts.forEach((el, index) => {
+                neededKeys.map(item => {
+                    if (this.state.contacts[index][item].toLowerCase().indexOf(enterValue) !== -1) {
+                        if (!newArray.includes(el)) {
+                            newArray.push(el);
+                        };
+                        console.log(1)
+                        this.setState({search: true});
+                    } 
+                });
+            });
+            if (!newArray.length) {
+                this.setState({search : false});
+            } else {
+                this.setState({ contacts: newArray })
+            };
+        };
+    };
+
+    createList() {
+        console.log(this.state.search)
+        if(this.state.search)
+           return this.state.contacts.map(contact => <Contact {...contact} />)
+        else 
+            return (<div className = "no-contacts">Контактів немає</div>)  
+    };
     render() {
         return (
             <div className="wrapper">
@@ -122,10 +137,11 @@ class CreatePostPage extends Component {
                         </div>
                     </div>
                     <div className="contacts-list">
-                        {this.state.contacts.map(i => <Contact info={i} />)}
+                        {
+                        this.createList()}
                     </div>
                 </div>
-                <div className="footer"></div>
+                <div className="footer" />
             </div>
         )
     }

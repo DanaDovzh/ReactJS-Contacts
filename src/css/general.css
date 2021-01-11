@@ -202,6 +202,12 @@ div#root {
   background-repeat: no-repeat;
 }
 
+.no-contacts {
+  font-size: calc(14px + 6 * ((100vw - 320px) / 1120));
+  font-weight: 600;
+  font-family: "Kaushan Script", cursive;
+}
+
 .MuiTypography-body1 {
   font-size: calc(12px + 4 * ((100vw - 320px) / 1120));
 }

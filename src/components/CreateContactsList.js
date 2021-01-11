@@ -58,27 +58,34 @@ class CreatePostPage extends Component {
 
     findGender = () => {
         let arrayChoose = [], arrayAllGenders = [];
+        let resultArray= [];
         if (this.state.checkFemale) {
-            arrayChoose.push(this.state.contacts.filter(i =>
-                i.gender === "female"
+            arrayChoose.push(this.state.contacts.filter(contact =>
+                contact.gender === "female"
             ));
             arrayAllGenders = arrayChoose.flat(Infinity);
         }
 
         if (this.state.checkMale) {
-            arrayChoose.push(this.state.contacts.filter(i =>
-                i.gender === "male"
+            arrayChoose.push(this.state.contacts.filter(contact =>
+                contact.gender === "male"
             ));
             arrayAllGenders = arrayChoose.flat(Infinity);
         }
 
         if (this.state.checkOther) {
-            arrayChoose.push(this.state.contacts.filter(i =>
-                i.gender !== "male" && i.gender !== "female"
+            arrayChoose.push(this.state.contacts.filter(contact =>
+                contact.gender !== "male" && contact.gender !== "female"
             ));
             arrayAllGenders = arrayChoose.flat(Infinity);
         }
-        this.setState({ contacts: arrayAllGenders });
+        
+        contactsList.map(contact => {
+            arrayAllGenders.map(item => {
+                if (contact === item)  resultArray.push(contact);
+            })
+        })
+        this.setState({ contacts: resultArray });
 
     }
     filterGenders = (event) => {
@@ -99,16 +106,12 @@ class CreatePostPage extends Component {
                         if (!newArray.includes(el)) {
                             newArray.push(el);
                         };
-                        console.log(1)
                         this.setState({search: true});
                     } 
                 });
             });
-            if (!newArray.length) {
-                this.setState({search : false});
-            } else {
-                this.setState({ contacts: newArray })
-            };
+            (!newArray.length) ? this.setState({search : false}) :       
+                                this.setState({ contacts: newArray });
         };
     };
 

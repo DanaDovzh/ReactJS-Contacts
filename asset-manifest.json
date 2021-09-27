@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/ReactJS-Contacts/static/css/main.fa666efc.chunk.css",
+    "main.js": "/ReactJS-Contacts/static/js/main.513f1028.chunk.js",
+    "main.js.map": "/ReactJS-Contacts/static/js/main.513f1028.chunk.js.map",
+    "runtime-main.js": "/ReactJS-Contacts/static/js/runtime-main.a39a873a.js",
+    "runtime-main.js.map": "/ReactJS-Contacts/static/js/runtime-main.a39a873a.js.map",
+    "static/js/2.e6a08d54.chunk.js": "/ReactJS-Contacts/static/js/2.e6a08d54.chunk.js",
+    "static/js/2.e6a08d54.chunk.js.map": "/ReactJS-Contacts/static/js/2.e6a08d54.chunk.js.map",
+    "static/js/3.aeb4a928.chunk.js": "/ReactJS-Contacts/static/js/3.aeb4a928.chunk.js",
+    "static/js/3.aeb4a928.chunk.js.map": "/ReactJS-Contacts/static/js/3.aeb4a928.chunk.js.map",
+    "index.html": "/ReactJS-Contacts/index.html",
+    "static/css/main.fa666efc.chunk.css.map": "/ReactJS-Contacts/static/css/main.fa666efc.chunk.css.map",
+    "static/js/2.e6a08d54.chunk.js.LICENSE.txt": "/ReactJS-Contacts/static/js/2.e6a08d54.chunk.js.LICENSE.txt",
+    "static/media/145859.fa328fc9.svg": "/ReactJS-Contacts/static/media/145859.fa328fc9.svg",
+    "static/media/424431.606ed15c.svg": "/ReactJS-Contacts/static/media/424431.606ed15c.svg",
+    "static/media/921082.52aacba2.svg": "/ReactJS-Contacts/static/media/921082.52aacba2.svg",
+    "static/media/921110.05f7bbd6.svg": "/ReactJS-Contacts/static/media/921110.05f7bbd6.svg",
+    "static/media/949666.a4054b8a.svg": "/ReactJS-Contacts/static/media/949666.a4054b8a.svg",
+    "static/media/anonymous.1141569b.svg": "/ReactJS-Contacts/static/media/anonymous.1141569b.svg",
+    "static/media/general.css": "/ReactJS-Contacts/static/media/bg.2d01e320.jpg",
+    "static/media/contact.css": "/ReactJS-Contacts/static/media/other.cc4f6620.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a39a873a.js",
+    "static/js/2.e6a08d54.chunk.js",
+    "static/css/main.fa666efc.chunk.css",
+    "static/js/main.513f1028.chunk.js"
+  ]
+}
